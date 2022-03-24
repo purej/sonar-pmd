@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.sonarsource.pmd</groupId>
+    <groupId>com.purej.pmd</groupId>
     <artifactId>sonar-pmd</artifactId>
     <version>3.3.2-SNAPSHOT</version>
   </parent>
@@ -14,7 +14,6 @@
   <name>SonarQube PMD Plugin</name>
   <description>Sonar-PMD is a plugin that provides coding rules from PMD.</description>
   <inceptionYear>2012</inceptionYear>
-  <url>https://github.com/jensgerdes/sonar-pmd</url>
 
   <properties>
     <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>

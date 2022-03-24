@@ -1,12 +1,12 @@
-# SonarQube PMD Plugin [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.sonarsource.pmd/sonar-pmd-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.sonarsource.pmd/sonar-pmd-plugin) [![Build Status](https://api.travis-ci.org/jensgerdes/sonar-pmd.svg?branch=master)](https://travis-ci.org/jensgerdes/sonar-pmd) [![SonarStatus](https://sonarcloud.io/api/project_badges/measure?project=org.sonarsource.pmd%3Asonar-pmd&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.sonarsource.pmd%3Asonar-pmd) [![SonarStatus](https://sonarcloud.io/api/project_badges/measure?project=org.sonarsource.pmd%3Asonar-pmd&metric=coverage)](https://sonarcloud.io/dashboard?id=org.sonarsource.pmd%3Asonar-pmd)
+# SonarQube PMD Plugin [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.purej.pmd/sonar-pmd-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.purej.pmd/sonar-pmd-plugin)
+
 Sonar-PMD is a plugin that provides coding rules from [PMD](https://pmd.github.io/).
 
-For a list of all rules and their status, see: [RULES.md](https://github.com/jensgerdes/sonar-pmd/blob/master/docs/RULES.md)
+Note: This version supports Java 17 and this repo has been forked from [jensgerdes/sonar-pmd](https://github.com/jensgerdes/sonar-pmd) as the original author did not respond to issues (eg. upgrading it to support latest Java versions).
+
 
 ## Installation
-The plugin is available in the SonarQube marketplace and should preferably be installed from within SonarQube (Administration -->  Marketplace --> Search _pmd_).
-
-Alternatively, download the [latest JAR file](https://github.com/jensgerdes/sonar-pmd/releases/latest), put it into the plugin directory (`./extensions/plugins`) and restart SonarQube.
+To install it, download the [latest JAR file](https://github.com/purej/sonar-pmd/releases/latest), put it into the plugin directory (`./extensions/plugins`) and restart SonarQube.
 
 ## Usage
 Usage should be straight forward:
@@ -15,23 +15,6 @@ Usage should be straight forward:
 
 ### Troubleshooting
 Sonar-PMD analyzes the given source code with the Java source version defined in your Gradle or Maven project.
-In case you are not using one of these build tools, PMD uses the default Java version - which is **1.6**.  
-
-If that does not match the version you are using, set the `sonar.java.source` property to tell PMD which version of Java your source code complies to. 
-
-Possible values: 
-- 1.4
-- 1.5 or 5 
-- 1.6 or 6 
-- 1.7 or 7 
-- 1.8 or 8
-- 9
-- 10
-- 11
-- 12
-- 13
-- 14
-- 15
 
 ## Description / Features
 PMD Plugin|2.0|2.1|2.2|2.3|2.4.1|2.5|2.6|3.0.0|3.1.x|3.2.x|3.3.x
@@ -49,4 +32,3 @@ PMD tool provides some rules that can check the code of JUnit tests. Please note
 Sonar-PMD is licensed under the [GNU Lesser General Public License, Version 3.0](https://github.com/jensgerdes/sonar-pmd/blob/master/LICENSE.md).
 
 Parts of the rule descriptions displayed in SonarQube have been extracted from [PMD](https://pmd.github.io/) and are licensed under a [BSD-style license](https://github.com/pmd/pmd/blob/master/LICENSE).  
-

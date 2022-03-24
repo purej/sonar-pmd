@@ -29,7 +29,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.sonar.wsclient.issue.Issue;
 import org.sonar.wsclient.issue.IssueQuery;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,7 +37,6 @@ import static com.sonar.it.java.suite.TestUtils.keyForTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class PmdIT {
-
     private static final PmdTestOrchestrator ORCHESTRATOR = PmdTestOrchestrator.init();
 
     @BeforeAll
@@ -47,7 +45,7 @@ class PmdIT {
     }
 
     @ParameterizedTest
-    @EnumSource(value = JavaVersion.class, mode = EnumSource.Mode.EXCLUDE, names = {"JAVA_0_9", "JAVA_16", "JAVA_RECENT"})
+    @EnumSource(value = JavaVersion.class, mode = EnumSource.Mode.EXCLUDE, names = {"JAVA_0_9", "JAVA_RECENT"})
     void testPmdExtensionsWithDifferentJavaVersions(JavaVersion version) {
 
         // given
